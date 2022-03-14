@@ -1,8 +1,10 @@
-#define PHOTO A5
+#define LEFT 9
+#define RIGHT 10
 
 void setup(){
     Serial.begin(9600);
-    pinMode(PHOTO,INPUT);
+    pinMode(LEFT,INPUT);
+    pinMode(RIGHT, INPUT);
 
 
 
@@ -18,8 +20,9 @@ void loop(){
 
 
 
-    Serial.print(analogRead(PHOTO));
-    Serial.print("\n");
+    Serial.print(digitalRead(LEFT));
+    Serial.println(digitalRead(RIGHT));
+    
 
     // if (analogRead(PHOTO)>900){
     //     Serial.print("黒だよ！\n");
